@@ -16,3 +16,21 @@ C:\Users\Asus\Documents\Visual Studio 2017\Projects\FirebaseTesting\FirebaseTest
 C:\Users\Asus\Documents\Visual Studio 2017\Projects\FirebaseTesting\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.csproj.CopyComplete
 C:\Users\Asus\Documents\Visual Studio 2017\Projects\FirebaseTesting\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.dll
 C:\Users\Asus\Documents\Visual Studio 2017\Projects\FirebaseTesting\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.pdb
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTestingTests.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTestingTests.pdb
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTesting.exe
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FireSharp.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\RestSharp.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTesting.pdb
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTesting.exe.config
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\RestSharp.xml
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.csprojAssemblyReference.cache
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.csproj.CoreCompileInputs.cache
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.csproj.CopyComplete
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.dll
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\obj\Debug\FirebaseTestingTests.pdb
+C:\Users\cigid\Source\Repos\Firebase_Repo\FirebaseTestingTests\bin\Debug\FirebaseTestingTests.dll.config

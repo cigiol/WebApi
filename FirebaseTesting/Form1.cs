@@ -19,8 +19,8 @@ namespace FirebaseTesting
     public partial class Form1 : Form
     {
         #region
-        string authentication = "your key";
-        string baseurl = "https://yourdb.firebaseio.com/";
+        string authentication = "uKLB1Fcqv3Gog8KBraS1OqL3Tw92a2nYfDfdFqkx";
+        string baseurl = "https://zurna-dbc48.firebaseio.com/";
         FireRepo<Country> repo;
         #endregion
         public Form1()
@@ -40,7 +40,6 @@ namespace FirebaseTesting
             Guid registerGuid = Guid.NewGuid();
             Country country = new Country() {
                 id = registerGuid,
-                Foundation = DateTime.Now.AddYears(-20),
                 Name = "Elazığ",
                 Population = 580872
             };
@@ -63,16 +62,16 @@ namespace FirebaseTesting
         private async void button3_Click(object sender, EventArgs e)
         {
             //For read function using methot >Find(Guid id)
-            Country finded = await repo.Find(Guid.Parse("d601fa4b-fb16-4f86-b4e0-395c5695a5f5"));
+            Country finded = await repo.Find(Guid.Parse("12208d50-1043-45dc-8cd6-983d12f5b272"));
+            Console.WriteLine(finded.Name);
         }
 
         private async void button5_Click(object sender, EventArgs e)
         {
             //For update hash/guid ='d601fa4b-fb16-4f86-b4e0-395c5695a5f5'
-            Country targetData= await repo.Find(Guid.Parse("d601fa4b-fb16-4f86-b4e0-395c5695a5f5"));
+            Country targetData= await repo.Find(Guid.Parse("12208d50-1043-45dc-8cd6-983d12f5b272"));
             targetData.Name = ".Net City";
             targetData.Population = 1359876;
-            targetData.Foundation = DateTime.Now;
             await repo.Update(targetData.id, targetData);
         }
     }
@@ -81,7 +80,6 @@ namespace FirebaseTesting
         public Guid id { get; set; }
         public string Name { get; set; }
         public double Population { get; set; }
-        public DateTime Foundation { get; set; }
     }
    
 }
