@@ -15,14 +15,14 @@ namespace webapi.Controllers
         #region
         string authentication = "uKLB1Fcqv3Gog8KBraS1OqL3Tw92a2nYfDfdFqkx";
         string baseurl = "https://zurna-dbc48.firebaseio.com/";
-        public static FireRepo<Country> repo;
+        public static FireRepo<User> repo;
         #endregion
         public ValuesController()
         {
-            repo = new FireRepo<Country>(authentication, baseurl, $"{typeof(Country).Name.ToString()}/");
+            repo = new FireRepo<User>(authentication, baseurl, $"{typeof(User).Name.ToString()}/");
         }
         // GET api/values
-        public async Task<List<Country>> GetAsync()
+        public async Task<List<User>> GetAsync()
         {
             var resultlist = await repo.GetList();
             //repo = new FireRepo<Country>(authentication, baseurl, $"{typeof(Country).Name.ToString()}/");
@@ -38,25 +38,43 @@ namespace webapi.Controllers
         [Route("api/values/{hash}")]
         public async Task<string> Get(string hash)
         {
-            Country finded = await repo.Find(Guid.Parse(hash));
-            return finded.Name.ToString();
+            User finded = await repo.Find(Guid.Parse(hash));
+            return finded.id.ToString();
         }
             
         
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public async Task PostAsync([FromBody]User value)
         {
+            //Location loc = new Location {
+            //    City = "Elazığ",
+            //    Country = "Turkey",
+            //    Lan = "123",
+            //    Lat = "23"
+            //};
+            //Guid registerGuid = Guid.NewGuid();
+            //User user = new User()
+            //{
+            //    id = registerGuid,
+            //    DeviceId = value,
+            //    Location = loc,
+            //    PhoneNumber = "852654"
+            //};
+            await repo.Add(value, value.id);
         }
 
         // PUT api/values/5
+
         public void Put(int id, [FromBody]string value)
         {
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        [HttpDelete, Route("api/values/{id}")]
+        public async Task DeleteAsync(Guid id)
         {
+            await repo.Delete(id);
         }
     }
 }
