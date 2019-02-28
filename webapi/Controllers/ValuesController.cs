@@ -45,7 +45,7 @@ namespace webapi.Controllers
         
 
         // POST api/values
-        public async Task PostAsync([FromBody]User value)
+        public async Task PostAsync([FromBody]User user)
         {
             //Location loc = new Location {
             //    City = "Elazığ",
@@ -61,13 +61,15 @@ namespace webapi.Controllers
             //    Location = loc,
             //    PhoneNumber = "852654"
             //};
-            await repo.Add(value, value.id);
+            await repo.Add(user, user.id);
         }
 
         // PUT api/values/5
-
-        public void Put(int id, [FromBody]string value)
+        [HttpPut, Route("api/values/{id}")]
+        public async Task PutAsync(string id, [FromBody]User user)
         {
+            await repo.Update(Guid.Parse(id), user);
+
         }
 
         // DELETE api/values/5
