@@ -16,10 +16,12 @@ namespace webapi.Controllers
         string authentication = "uKLB1Fcqv3Gog8KBraS1OqL3Tw92a2nYfDfdFqkx";
         string baseurl = "https://zurna-dbc48.firebaseio.com/";
         public static FireRepo<User> repo;
+        public static FireRepo<Post> repo2;
         #endregion
         public ValuesController()
         {
             repo = new FireRepo<User>(authentication, baseurl, $"{typeof(User).Name.ToString()}/");
+            repo2 = new FireRepo<Post>(authentication, baseurl, $"{typeof(Post).Name.ToString()}/");
         }
         // GET api/values
         public async Task<List<User>> GetAsync()
@@ -45,7 +47,7 @@ namespace webapi.Controllers
         
 
         // POST api/values
-        public async Task PostAsync([FromBody]User user)
+        public async Task PostAsync([FromBody]Post user)//BURDA KALDIM(REPO2 OLUSTURDUM POST ICIN DENEDIM EKLEDI FIREA)
         {
             //Location loc = new Location {
             //    City = "Elazığ",
@@ -61,7 +63,7 @@ namespace webapi.Controllers
             //    Location = loc,
             //    PhoneNumber = "852654"
             //};
-            await repo.Add(user, user.id);
+            await repo2.Add(user, user.id);
         }
 
         // PUT api/values/5
