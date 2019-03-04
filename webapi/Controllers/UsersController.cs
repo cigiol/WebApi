@@ -35,7 +35,7 @@ namespace webapi.Controllers
         }
 
         // GET api/values/5
-        [Route("api/posts/{hash}")]
+        [Route("api/users/{hash}")]
         public async Task<string> Get(string hash)
         {
             User finded = await repo.Find(Guid.Parse(hash));
@@ -65,7 +65,7 @@ namespace webapi.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut, Route("api/posts/{id}")]
+        [HttpPut, Route("api/users/{id}")]
         public async Task PutAsync(string id, [FromBody]User user)
         {
             await repo.Update(Guid.Parse(id), user);
@@ -73,7 +73,7 @@ namespace webapi.Controllers
         }
 
         // DELETE api/values/5
-        [HttpDelete, Route("api/posts/{id}")]
+        [HttpDelete, Route("api/users/{id}")]
         public async Task DeleteAsync(Guid id)
         {
             await repo.Delete(id);
